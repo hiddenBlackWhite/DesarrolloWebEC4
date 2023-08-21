@@ -1,0 +1,28 @@
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 60px); /* Subtract the navbar height */
+    margin-top: 60px; /* Add a top margin to create space for the navbar */
+}
+
+.user-card {
+    max-width: 400px;
+    text-align: center;
+}
+
+.user-card button {
+    margin-top: 20px;
+}
+
+
+.footer {
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 0px;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+

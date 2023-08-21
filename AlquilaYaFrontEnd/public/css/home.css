@@ -1,0 +1,150 @@
+/* Estilo para el fondo de imagen */
+body {
+    background-image: url('../images/pexels-phyo-hein-kyaw-881727.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Estilo para el contenido en el main */
+  #main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex: 1;
+
+    
+  }
+  
+  .btn-centered {
+    display: block;
+    margin: 0 auto;
+
+  }
+
+  .titulo {
+    margin-bottom: 40px;
+    color: #fff;
+  }
+
+
+  .footer {
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 0px;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+
+
+
+  /*Login*/
+
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+  }
+
+
+  .login-form {
+    position: relative;
+    width: 300px;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  .blur-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(8px);
+    z-index: -1;
+    border-radius: 25px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .register-link {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .btn-login {
+    width: 100%;
+  }
+
+
+
+  /*Registro*/
+
+
+  .registration-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.registration-form {
+    position: relative;
+    width: 800px; /* Aumenta el ancho para mantener el tamaño original */
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+  .blur-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(8px);
+    z-index: -1;
+    border-radius: 25px;
+  }
+
+  .registration-title {
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .btn-register {
+    width: 100%;
+  }
+  
+  .login-link {
+    text-align: center;
+    margin-top: 10px;
+  }

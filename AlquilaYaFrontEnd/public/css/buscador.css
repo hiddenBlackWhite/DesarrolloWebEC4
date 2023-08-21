@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/pexels-phyo-hein-kyaw-881727.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  
+
+  .footer {
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 0px;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .main-content {
+    margin-top: 100px; /* Ajusta este valor según sea necesario */
+    display: flex;
+    justify-content: center;
+
+  }
+
+  .departamento-container {
+    display: flex;
+    flex-direction: column; /* Cambiamos la dirección a columna */
+    align-items: center; /* Centramos horizontalmente */
+    gap: 30px; /* Espacio vertical entre los contenedores */
+}
+
+.departamento-item {
+    position: relative;
+    width: 70vw; 
+    margin: 10px;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    display: flex;
+}
+  
+  .departamento-item img {
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+    
+  }
+  
+  .departamento-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .departamento-info h3 {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  
+  .departamento-info p {
+    margin: 0;
+  }
+  .precio {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    
+  }
+  
+  .ver-mas {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    
+
+  }
+
+  
+  .btn-primary {
+    padding: 10px 20px;
+  }
+
+
+  .container {
+    position: relative;
+
+  }
+  
+  .agregar-dep {
+    margin-top: 10px;
+  }  
+
+  
+ 
+ 
+ 

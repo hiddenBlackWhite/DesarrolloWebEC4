@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;
+    }
+
+.main-content {
+    padding-top: 100px; 
+    display: flex;
+    justify-content: center;
+}
+
+.footer {
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 0px;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.content-frame {
+    border: 1px solid #ccc; /* Border color */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px; /* Set the maximum width of the content frame */
+}
+
+.department-image {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.department-details {
+    border-left: 1px solid #ccc; /* Vertical separator line */
+    padding-left: 20px;
+}

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/buscador.css">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <script src="../js/jquery-3.7.0.min.js"></script>
+
+</head>
+<body>
+    <header>
+
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Alquila Ya</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Alquila Ya</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="#">Clientes</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Usuario
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="#">Editar Perfil</a></li>
+                        <li><a class="dropdown-item" href="#">Cerrar Sesion</a></li>
+                        
+                        </ul>
+                    </li>
+                    </ul>
+                    
+                </div>
+                </div>
+            </div>
+        </nav>
+
+
+    </header>
+
+    
+
+    <main class="main-content">
+
+        
+
+
+
+        <!--Listado departamentos-->
+
+
+
+        <div class="container">
+
+                <h1>Listado de Departamentos</h1>
+
+            <div class="departamento-container">
+                <div class="departamento-item">
+                    <img src="ruta/de/imagen_departamento.jpg" alt="Departamento 1">
+                    <div class="departamento-info">
+                        <h3>Departamento 1</h3>
+                        <p>Descripción del Departamento 1.</p>
+                        <p class="precio">Precio: $1000</p>
+                        <button class="btn btn-primary ver-mas">Reservar cita</button>
+                    </div>
+                </div>
+                <div class="departamento-item">
+                    <img src="ruta/de/imagen_departamento.jpg" alt="Departamento 2">
+                    <div class="departamento-info">
+                        <h3>Departamento 2</h3>
+                        <p>Descripción del Departamento 2.</p>
+                        <p class="precio">Precio: $1500</p>
+                        <button class="btn btn-primary ver-mas">Reservar cita</button>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-success agregar-dep">Agregar Departamento</button>
+
+        </div>
+
+
+        <!--Modal Reserva-->
+
+        <div class="modal" id="reservaModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Reservar Cita</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="reservaForm">
+                            <div class="form-group">
+                                <label for="clienteId">ID del Cliente:</label>
+                                <input type="text" class="form-control" id="clienteId" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="fechaReserva">Fecha de Reserva:</label>
+                                <input type="date" class="form-control" id="fechaReserva" required>
+                            </div>
+                            <!-- Agrega más campos aquí según sea necesario -->
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" id="confirmarReserva">Confirmar Reserva</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal para agregar departamento -->
+
+        <div class="modal fade" id="agregarDepartamentoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Agregar Departamento</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Agrega el formulario para agregar un nuevo departamento aquí -->
+                        <form id="agregarDepartamentoForm">
+                            <!-- Agrega campos del formulario según sea necesario -->
+                            <div class="mb-3">
+                                <label for="nombreDepartamento" class="form-label">Titulo</label>
+                                <input type="text" class="form-control" id="nombreDepartamento" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="descripcionDepartamento" class="form-label">Descripción del Departamento</label>
+                                <textarea class="form-control" id="descripcionDepartamento" rows="4" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="descripcionDepartamento" class="form-label">Direccion</label>
+                                <input class="form-control" id="direccionDepartamento"  required></input>
+                            </div>
+                            <div class="mb-3">
+                                <label for="descripcionDepartamento" class="form-label">Distrito</label>
+                                <input class="form-control" id="distritoDepartamento"  required></input>
+                            </div>
+                            <div class="mb-3">
+                                <label for="descripcionDepartamento" class="form-label">Precio</label>
+                                <input type="number" class="form-control" id="precioDepartamento"  required></input>
+                            </div>
+                            <div class="mb-3">
+                                <label for="descripcionDepartamento" class="form-label">Imagen</label>
+                                <input type="file" class="form-control" id="imagenDepartamento"  required></input>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" id="guardarDepartamento">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+
+    </main>
+
+    <footer class="footer bg-dark">
+        <p>&copy; 2023 Alquila Ya. Todos los derechos reservados.</p>
+    </footer>
+
+    <!--Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+    <script>
+       $(document).ready(function () {
+            // Asigna un manejador de eventos al botón "Reservar cita"
+            $('.ver-mas').click(function () {
+                $('#reservaModal').modal('show');
+            });
+
+            // Asigna un manejador de eventos al botón "Confirmar Reserva"
+            $('#confirmarReserva').click(function () {
+                // Aquí puedes agregar el código para enviar la reserva al servidor
+                // por medio de una solicitud AJAX
+
+                // Muestra un mensaje de reserva exitosa
+                alert('Reserva exitosa');
+
+                // Cierra el modal de reserva
+                $('#reservaModal').modal('hide');
+            });
+
+            // Asigna un manejador de eventos al botón "Cerrar" dentro del modal
+            $('.modal-footer .btn-secondary, .modal-header .close').click(function () {
+                // Cierra el modal de reserva
+                $('#reservaModal').modal('hide');
+            });
+
+
+            $('.agregar-dep').click(function () {
+                $('#agregarDepartamentoModal').modal('show');
+            });
+
+            // Asigna un manejador de eventos al botón "Guardar Departamento"
+            $('#guardarDepartamento').click(function () {
+                // Aquí puedes agregar el código para guardar el departamento
+                // Muestra un mensaje de éxito y cierra el modal
+                alert('Departamento agregado exitosamente');
+                $('#agregarDepartamentoModal').modal('hide');
+            });
+
+
+        });
+
+
+        
+    </script>
+
+    
+
+
+</body>
+</html>

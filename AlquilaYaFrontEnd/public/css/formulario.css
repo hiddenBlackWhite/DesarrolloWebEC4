@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('../images/pexels-phyo-hein-kyaw-881727.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  }
+  .main-content {
+      padding-top: 60px; /* Espacio entre el navbar y el formulario */
+      display: flex;
+      justify-content: center;
+  }
+
+  .footer {
+  text-align: center;
+  padding-top: 2px;
+  padding-bottom: 0px;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  }
+
+  .main-content {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  }
+
+  .container {
+  margin-top: 0; /* Ajusta el valor del margen superior según sea necesario */
+  }
+
+  .card {
+  margin: 20px;
+  padding: 20px;
+  }
+
+  .card-header {
+  border-bottom: 2px solid #ccc; /* Línea divisoria debajo del título */
+  padding-bottom: 10px; /* Espaciado entre el título y el formulario */
+  }
